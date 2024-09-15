@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, watch } from 'vue'
 import rawData from '@/data/data.json'
 
 const getRawData = () => JSON.parse(JSON.stringify(rawData))
@@ -43,17 +43,15 @@ const openBox = (boxIndex: number, openedBox: Box) => {
     boxList.value[boxIndex].show = true
 
     if (openedBox.matched) return
-    if (userSelection.value[0]) {
-      if (
-        userSelection.value[0].id === openedBox.id &&
-        userSelection.value[0].value === openedBox.value
-      ) {
-        return
-      } else {
-        userSelection.value[1] = openedBox
-      }
+    if (!userSelection.value[0]) userSelection.value[0] = openedBox
+    else if (
+      userSelection.value[0] &&
+      userSelection.value[0].id === openedBox.id &&
+      userSelection.value[0].value === openedBox.value
+    ) {
+      return
     } else {
-      userSelection.value[0] = openedBox
+      userSelection.value[1] = openedBox
     }
   }
 }

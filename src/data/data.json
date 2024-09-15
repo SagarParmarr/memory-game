@@ -1,18 +1,18 @@
 [
-  { "id": "1", "value": "🍩", "show": false, "matched": false },
+  { "id": "1", "value": "🍉", "show": false, "matched": false },
   { "id": "2", "value": "🍎", "show": false, "matched": false },
   { "id": "3", "value": "🍌", "show": false, "matched": false },
   { "id": "4", "value": "🍎", "show": false, "matched": false },
-  { "id": "5", "value": "🍏", "show": false, "matched": false },
+  { "id": "5", "value": "🍉", "show": false, "matched": false },
   { "id": "6", "value": "🧁", "show": false, "matched": false },
   { "id": "7", "value": "🍌", "show": false, "matched": false },
   { "id": "8", "value": "🧁", "show": false, "matched": false },
-  { "id": "9", "value": "🍩", "show": false, "matched": false },
-  { "id": "10", "value": "🍎", "show": false, "matched": false },
-  { "id": "11", "value": "🍌", "show": false, "matched": false },
-  { "id": "12", "value": "🍎", "show": false, "matched": false },
-  { "id": "13", "value": "🍏", "show": false, "matched": false },
-  { "id": "14", "value": "🧁", "show": false, "matched": false },
-  { "id": "15", "value": "🍌", "show": false, "matched": false },
-  { "id": "16", "value": "🧁", "show": false, "matched": false }
+  { "id": "9", "value": "🐈", "show": false, "matched": false },
+  { "id": "10", "value": "🐕", "show": false, "matched": false },
+  { "id": "11", "value": "🐄", "show": false, "matched": false },
+  { "id": "12", "value": "🐃", "show": false, "matched": false },
+  { "id": "13", "value": "🐃", "show": false, "matched": false },
+  { "id": "14", "value": "🐈", "show": false, "matched": false },
+  { "id": "15", "value": "🐄", "show": false, "matched": false },
+  { "id": "16", "value": "🐕", "show": false, "matched": false }
 ]
