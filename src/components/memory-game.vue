@@ -38,18 +38,20 @@ const restartGame = () => {
   shuffleBoxes()
 }
 
-const openBox = (boxIndex: number, openedBox: Box) => {
+const openBox = (boxIndex: number, openedBox: Box): void => {
   if (userCanOpenBox.value) {
     boxList.value[boxIndex].show = true
 
     if (openedBox.matched) return
-    if (!userSelection.value[0]) userSelection.value[0] = openedBox
-    else if (
+    if (
       userSelection.value[0] &&
       userSelection.value[0].id === openedBox.id &&
       userSelection.value[0].value === openedBox.value
     ) {
       return
+    }
+    if (!userSelection.value[0]) {
+      userSelection.value[0] = openedBox
     } else {
       userSelection.value[1] = openedBox
     }
