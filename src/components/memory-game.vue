@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import rawData from '@/data/data.json'
 
 const getRawData = () => JSON.parse(JSON.stringify(rawData))
@@ -90,6 +90,11 @@ watch(
   },
   { deep: true }
 )
+
+onMounted(() => {
+  boxList.value = getRawData()
+  shuffleBoxes()
+})
 </script>
 
 <template>
@@ -144,8 +149,8 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(4, 60px);
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   justify-content: center;
 
   .box {
@@ -158,32 +163,30 @@ header {
     &.openedBox {
       background: whitesmoke;
     }
-    .emoji {
-      font-size: 80px;
-    }
 
     .tickMark {
       position: absolute;
       right: 4px;
       font-size: 16px;
     }
-  }
 
-  @media screen and (min-width: 500px) {
-    grid-template-columns: repeat(4, 90px);
-    grid-template-rows: repeat(4, 90px);
-
-    .box {
-      width: 90px;
+    .emoji {
+      font-size: 40px;
     }
   }
 
   @media screen and (min-width: 600px) {
     grid-template-columns: repeat(4, 120px);
     grid-template-rows: repeat(4, 120px);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
 
     .box {
       width: 120px;
+
+      .emoji {
+        font-size: 80px;
+      }
     }
   }
 }
